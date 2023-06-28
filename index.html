@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Social Media Share Buttons</title>
+
+	<!-- bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+	<!-- font awesome cdn -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+
+<div class="container">
+	<div> Share this :  </div>
+
+	<div class="list-group">
+		<a href="https://facebook.com" class="facebook list-group-item list-group-action">
+			<i class="fa-brands fa-facebook"></i> Facebook
+		</a>
+		<a href="https://instagram.com" class="instagram list-group-item list-group-action">
+			<i class="fa-brands fa-instagram"></i> Instagram
+		</a>
+		<a href="https://twitter.com" class="twitter list-group-item list-group-action">
+			<i class="fa-brands fa-twitter"></i> Twitter
+		</a>
+		<a href="https://linkedin.com" class="linkedin list-group-item list-group-action">
+			<i class="fa-brands fa-linkedin"></i> Linkedin
+		</a>
+	</div>
+</div>
+
+<script type="text/javascript">
+
+	const link = 'https://nokensoft.com/'; // encodeURI(window.location.href);
+	const msg = encodeURIComponent('PT. Noken Inovasi Teknologi Informasi');
+	const hashtags = encodeURIComponent('nokensoft', 'papuaitconsultant');
+	const title = encodeURIComponent(document.querySelector('title').textContent);
+
+	console.log([link, msg, title]);
+
+	const fb = document.querySelector('.facebook');
+	fb.href = `https://www.facebook.com/share.php?u=${link}`;
+
+	const twitter = document.querySelector('.twitter');
+	twitter.href = `https://www.twitter.com/share?&url=${link}&text=${msg}&hashtags=nokensoft,papuaitconsultant`;
+
+	const linkedin = document.querySelector('.linkedin');
+	linkedin.href = `https://www.linkedin.com/sharing/share-offsite/?url=${link}`;
+
+</script>
+
+</body>
+</html>
